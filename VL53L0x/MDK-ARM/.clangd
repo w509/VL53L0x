@@ -1,0 +1,6 @@
+CompileFlags:
+    Add:
+        - -IC:\Users\26070\AppData\Local\Keil_v5\ARM\ARMCLANG/include
+        - -IC:\Users\26070\AppData\Local\Keil_v5\ARM\ARMCLANG/include/libcxx
+    CompilationDatabase: ./build/VL53L0x
+    Compiler: C:\Users\26070\AppData\Local\Keil_v5\ARM\ARMCLANG\bin\armclang.exe
