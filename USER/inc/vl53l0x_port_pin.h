@@ -9,4 +9,7 @@
 #define VL53L0X_SCL_PIN GPIO_PIN_15
 #define VL53L0X_SCL_PORT GPIOC
 
+#define CCC // GPIO时钟选择(A~G)，和上方SDA、SCL的端口对应
+#define BBB // 如果SDA和SCL为同一端口，定义一行即可
+
 #endif
