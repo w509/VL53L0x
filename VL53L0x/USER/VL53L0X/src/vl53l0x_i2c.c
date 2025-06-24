@@ -70,28 +70,28 @@ void delay_us(u32 nus) {
 void VL53L0X_i2c_init(void) {
 	GPIO_InitTypeDef GPIO_Initure;
 
-#if CLK_GPIO == AAA
+#ifdef AAA
 	__HAL_RCC_GPIOA_CLK_ENABLE();           //开启GPIOA时钟
 #endif
-#if CLK_GPIO == BBB
+#ifdef BBB
 	__HAL_RCC_GPIOB_CLK_ENABLE();           //开启GPIOB时钟
 #endif
-#if CLK_GPIO == CCC
+#ifdef CCC
 	__HAL_RCC_GPIOC_CLK_ENABLE();           //开启GPIOC时钟
 #endif
-#if CLK_GPIO == DDD
+#ifdef DDD
 	__HAL_RCC_GPIOD_CLK_ENABLE();           //开启GPIOD时钟
 #endif
-#if CLK_GPIO == EEE
+#ifdef EEE
 	__HAL_RCC_GPIOE_CLK_ENABLE();           //开启GPIOE时钟
 #endif
-#if CLK_GPIO == FFF
+#ifdef FFF
 	__HAL_RCC_GPIOF_CLK_ENABLE();           //开启GPIOF时钟
 #endif
-#if CLK_GPIO == GGG
+#ifdef GGG
 	__HAL_RCC_GPIOG_CLK_ENABLE();           //开启GPIOG时钟
 #endif
-
+	
 	GPIO_Initure.Pin = VL53L0X_SCL_PIN | VL53L0X_SDA_PIN; //PA11、PA12
 	GPIO_Initure.Mode = GPIO_MODE_OUTPUT_PP;  //推挽输出
 	GPIO_Initure.Pull = GPIO_PULLUP;          //上拉
